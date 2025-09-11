@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+        <a-camera> <a-cursor></a-cursor></a-camera>
+        <a-plane position="0 0 -4" color="lightgreen" rotation="-90 0 0" width="20" height="20"></a-plane>
+        <a-box position="0 0 -4" depth="1" height="1" width="1" color="blue"
+        animation="
+        property: position;
+        from: 0 0 -4;
+        to: 0 5 -4;
+        loop: true;
+        dir: alternate;
+        dur: 2500;
+        easing: easeInBack;"
+        animation__2="
+        property: scale;
+        from: 1 1 1;
+        to: 0 0 0;
+        startEvents: click;
+        dur: 0;"></a-box>
+        <a-cone color="red" radius-bottom="1" radius-top="0" height="2" position="-3 0 0"
+        animation="
+        property: position;
+        from: -3 0 0;
+        to: 3 0 0;
+        dur: 3000;
+        loop: true;
+        dir: alternate;
+        easing: easeOutBack;"
+        animation__2="
+        property: scale;
+        from: 1 0 2;
+        to:  0 0 0;
+        startEvents: click;
+        dur: 0;"></a-cone>
+        <a-sphere position="-3 1 -5" radius="0.5" color="yellow"
+        animation="
+        property: position;
+        from: -3 1 -5;
+        to: 3 1 5;
+        loop: true;
+        dir: alternate;
+        dur: 3500;
+        easing: easeInElastic;"
+        animation__2="
+        property: scale;
+        from: 0.5;
+        to: 0;
+        dur: 0;
+        startEvents: click;"></a-sphere>
+        <a-cylinder position="3 5 -4" radius="0.5" height="1" color="green"
+        animation="
+        property: position;
+        from: 3 5 -4;
+        to: -3 0 -4;
+        loop: true;
+        dir: alternate;
+        dur: 4000;
+        easing: easeOutElastic;"
+        animation__2="
+        property: scale;
+        from: 0.5 1;
+        to: 0 0;
+        startEvents: click;
+        dur: 0;"
+        animation__3="
+        property: rotation;
+        from:0 0 0;
+        to: -90 0 0;
+        loop: true;
+        dir: alternate;"></a-cylinder>
+       <a-dodecahedron color="purple" radius="1" position="0 4 5"
+       animation="
+       property: position;
+       from: 0 4 5;
+       to: 0 0 -5;
+       loop: true;
+       dir: alternate;
+       dur: 1000;
+       easing:easeInOutCubic;"
+       animation__2="
+       property: scale;
+       from: 1;
+       to: 0;
+       dur: 0;
+       startEvents: click;" ></a-dodecahedron>
+        </a-scene>
+    </body>
+</html>
